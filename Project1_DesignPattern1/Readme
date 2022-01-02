@@ -1,0 +1,16 @@
+Project One - Abstract Factory Design Pattern
+---------------------------------------------
+
+Problem Description
+
+George is the owner of a business based on orchards of apple trees, cherry trees and pear trees. Also, because the business is developing he needs to create 
+departments: delivery department, managerial department and orchard department. He needs an application to keep track of each orchard and each department. An orchard 
+consists of the number of trees planted and the orchard information - text descrption of it. A department has a name and a number of employees.
+
+Problem Solution
+
+In order to solve this problem I used the Abstract Factory Design Pattern because the application consists of multiple families of objects which are designed to be used
+together. The Abstract Factory uses a Factory Provider class which determine the factory to be used in the object creation: DepartmentFactory or Orchard Factory.
+Department Factory uses the create function which has as parameter the string name of the department to be created. Using the Department interface objects like 
+DeliveryDepartment, ManagerialDepartment or OrchardDepartment are created. The same method is applied in the case of Orchard Factory where AppleOrchard, CherryOrchard or
+PearOrchard can be created. 
