@@ -1,0 +1,19 @@
+Project Two - State Design Pattern
+---------------------------------------------
+
+Problem Description
+
+A delivery company wants to create an application which monitors the status of each order it has. An order has an unique ID, a customer name, a total price, an observation
+section and a current state. The state of an order can be: Create Order State, Placed Order State, Delivered Order State and Received Order State. The application can
+add a new order, remove an existent order, update an order, search order by ID, print all orders, move an order to next state and move an order to previous state.
+
+Problem Solution
+
+In order to solve this problem I used the State Design Pattern because an order can have multiple states and the behavior might change completely. 
+The application has a MVC ( Model -View - Controller) architecture. 
+The Model contains the OrderState interface which has three methods: nextState(move order to next state), previousState(move order to the previous state) 
+and getState(which gets the current state of the order). Also the model contains all the states of an order as classes which implements the OrderState interface 
+and the Order class which has all the order properties. 
+The View contains the run method which prints the application menu and makes the connection with the Controller methods.
+The Controller performs operations to an order/s and made the connection with Repository.
+The Repository has a list of orders and makes simple operations(add, remove, update etc) to it.
